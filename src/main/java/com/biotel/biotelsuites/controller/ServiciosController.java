@@ -56,7 +56,7 @@ public class ServiciosController {
         if(serviciosService.existeporNombre(servicios.getNombreServicio()))
             return new ResponseEntity(new Mensaje("ese nombre ya existe"), HttpStatus.BAD_REQUEST);
         serviciosService.guardar(servicios);
-        return new ResponseEntity(new Mensaje("servicio guardado"), HttpStatus.CREATED);
+        return new ResponseEntity(new Mensaje("servicios guardado"), HttpStatus.CREATED);
     }
     
     @PutMapping("/actualizar/{id}")

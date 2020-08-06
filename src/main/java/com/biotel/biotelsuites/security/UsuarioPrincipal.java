@@ -13,6 +13,10 @@ import java.util.stream.Collectors;
 public class UsuarioPrincipal implements UserDetails {
 
  
+    /**
+     *
+     */
+    private static final long serialVersionUID = 1L;
     private Long id;
     private String nombre;
     private String nombreUsuario;
