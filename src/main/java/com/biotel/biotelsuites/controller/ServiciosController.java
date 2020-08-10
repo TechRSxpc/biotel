@@ -105,7 +105,7 @@ public class ServiciosController {
             try {
                 Files.copy(archivo.getInputStream(), rutaArchivo);
             } catch (Exception e) {
-                e.printStackTrace();
+                return new ResponseEntity(new Mensaje("Error al subir la imagen"), HttpStatus.NOT_FOUND);
             }
             servicios.setFoto(NombreArchivo);
 
