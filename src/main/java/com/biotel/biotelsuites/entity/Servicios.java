@@ -1,7 +1,6 @@
 
 package com.biotel.biotelsuites.entity;
 
-import java.io.InputStream;
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -19,7 +18,7 @@ public class Servicios {
     private String nombreServicio;
     
     @NotBlank
-    private InputStream foto;
+    private String foto;
     
     @NotBlank
     private String descripcion;
@@ -36,7 +35,7 @@ public class Servicios {
     public Servicios() {
     }
 
-    public Servicios(long id, String nombreServicio, InputStream foto, String descripcion, double precio, int stock) {
+    public Servicios(long id, String nombreServicio, String foto, String descripcion, double precio, int stock) {
         this.id = id;
         this.nombreServicio = nombreServicio;
         this.foto = foto;
@@ -62,11 +61,11 @@ public class Servicios {
         this.nombreServicio = nombreServicio;
     }
 
-    public InputStream getFoto() {
+    public String getFoto() {
         return foto;
     }
 
-    public void setFoto(InputStream foto) {
+    public void setFoto(String foto) {
         this.foto = foto;
     }
 

@@ -1,4 +1,3 @@
-
 package com.biotel.biotelsuites.service;
 
 import com.biotel.biotelsuites.entity.Servicios;
@@ -21,7 +20,7 @@ public class ServiciosService {
         return lista;
     }
     
-    public Optional<Servicios> obtenerPorId(Long id){
+    public Optional<Servicios> obtenerPorId(Long id) {
         return servicioRepository.findById(id);
     }
     
